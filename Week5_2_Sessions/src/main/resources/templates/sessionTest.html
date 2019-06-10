@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>sessionTest</title>
+</head>
+<body>
+  <h1>Session Example</h1>
+  <h3>Request Variable: <span th:text="${reqVar}"></span></h3>
+  <h3>Session Variable: <span th:text="${session.meow}"></span></h3>
+
+  <form action="add">
+    Enter Name: <input type="text" name="name" />
+    <br><br>
+    <input type="submit" value="ADD">
+  </form>
+
+  <span th:text="${session.nameList}"></span>
+
+</body>
+</html>
