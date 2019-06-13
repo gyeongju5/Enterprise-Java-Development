@@ -24,7 +24,7 @@ public class HomeController {
     ColorBean colorbean = ce.makeColorBean(colorEntered);
 
     request.setAttribute("colorBean", colorbean);
-
+//    System.out.println(ce.makeColorBean(colorEntered));
     return "showColor";
   }
 }

@@ -11,14 +11,16 @@
 <body>
 <h2 style="text-align:center; margin:2rem auto;" th:text="${session.question}"></h2>
 <div class="container">
-  <div class="row" style="width:50%; margin:3rem auto;">
-    <button type="button" class="btn btn-primary col-md" th:text="${session.answer1}" style="margin:0 1rem;"></button>
-    <button type="button" class="btn btn-primary col-md" th:text="${session.answer2}" style="margin:0 1rem;"></button>
-  </div>
-  <div class="row" style="width:50%; margin:3rem auto;">
-    <button type="button" class="btn btn-primary col-md" th:text="${session.answer3}" style="margin:0 1rem;"></button>
-    <button type="button" class="btn btn-primary col-md" th:text="${session.answer4}" style="margin:0 1rem;"></button>
-  </div>
+  <form action="/jeopardy" method="GET">
+    <div class="row" style="width:50%; margin:3rem auto;">
+      <button type="submit" class="btn btn-primary col-md" th:text="${session.answer1}" style="margin:0 1rem;"></button>
+      <button type="submit" class="btn btn-primary col-md" th:text="${session.answer2}" style="margin:0 1rem;"></button>
+    </div>
+    <div class="row" style="width:50%; margin:3rem auto;">
+      <button type="submit" class="btn btn-primary col-md" th:text="${session.answer3}" style="margin:0 1rem;"></button>
+      <button type="submit" class="btn btn-primary col-md" th:text="${session.answer4}" style="margin:0 1rem;"></button>
+    </div>
+  </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

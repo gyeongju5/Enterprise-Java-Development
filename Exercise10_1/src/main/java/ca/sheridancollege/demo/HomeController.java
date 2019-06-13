@@ -19,6 +19,8 @@ public class HomeController {
   @GetMapping("/jeopardy")
   public String jeopardy(HttpServletRequest request) {
     request.setAttribute("username", request.getParameter("username"));
+    Player player = new Player();
+//    player.setName();
 
     return "jeopardy.html";
   }

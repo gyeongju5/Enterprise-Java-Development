@@ -22,6 +22,7 @@ public class HomeController {
         BeerExpert be = new BeerExpert();
         Beer b = be.pickBeer(c);
         request.setAttribute("mybeer", b);
+        System.out.println(be.pickBeer(c));
 
         return "showBeer";
     }
