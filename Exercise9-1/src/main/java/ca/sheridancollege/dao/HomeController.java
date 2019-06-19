@@ -10,21 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomeController {
 
-    @GetMapping("")
-    public String home() {
-        return "addName.html";
-    }
+  @GetMapping("")
+  public String home() {
+    return "addName.html";
+  }
 
-    @GetMapping("/add")
-    public ModelAndView add(ModelMap model, HttpServletRequest request) {
-        DAO.names.add(request.getParameter("name"))
-        return new ModelAndView("redirect:/", model);
-    }
+  @GetMapping("/add")
+  public ModelAndView add(ModelMap model, HttpServletRequest request) {
+    DAO.names.add(request.getParameter("name"));
+    return new ModelAndView("redirect:/", model);
+  }
 
-    @GetMapping("listnames")
-    public String listNames(HttpServletRequest request) {
-        request.setAttribute("woof", DAO.names);
-        return "thymeleaf";
+  @GetMapping("listnames")
+  public String listNames(HttpServletRequest request) {
+    request.setAttribute("woof", DAO.names);
+    return "thymeleaf";
 
-    }
+  }
 }

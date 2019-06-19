@@ -23,11 +23,11 @@ public class HomeController {
 //    }
 
 
-    @GetMapping("")
-    public String home(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  @GetMapping("")
+  public String home(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        return "addName";
-    }
+    return "addName";
+  }
 
 //    @GetMapping("/add")
 //    public ModelAndView addNames(ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -41,20 +41,20 @@ public class HomeController {
 //        return new ModelAndView("redirect:/listnames",modelMap);
 //    }
 
-    @GetMapping("/add")
-    public ModelAndView addNames(ModelMap model, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        DAO.names.add(request.getParameter("name"));
+  @GetMapping("/add")
+  public ModelAndView addNames(ModelMap model, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    DAO.names.add(request.getParameter("name"));
 
-        return new ModelAndView("redirect:/", model);
-    }
+    return new ModelAndView("redirect:/", model);
+  }
 
-    @GetMapping("/listnames")
-    public String listName(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        request.setAttribute("woof", DAO.names);
+  @GetMapping("/listnames")
+  public String listName(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    request.setAttribute("woof", DAO.names);
 //        request.setAttribute("woof", this.service.getNames());
 //        PrintWriter out = response.getWriter();
 //        out.println(DAO.names.get(0) + DAO.names.get(1));
 
-        return "thymeleaf";
-    }
+    return "thymeleaf";
+  }
 }

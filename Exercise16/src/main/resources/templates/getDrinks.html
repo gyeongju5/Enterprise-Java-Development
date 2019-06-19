@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    th, td {
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+<h1 style="margin:1rem auto;">Show Database</h1>
+<table style="text-align:center;border:1px solid gray;border-collapse:collapse">
+  <tr>
+    <th>Name</th>
+    <th>Main</th>
+    <th>Amount1</th>
+    <th>Second</th>
+    <th>Amount2</th>
+    <th>Description</th>
+  </tr>
+  <tr th:each="drink : ${drinks}">
+    <td th:text="${drink.getName()}"></td>
+    <td th:text="${drink.getMain()}"></td>
+    <td th:text="${drink.getAmount1()}"></td>
+    <td th:text="${drink.getSecond()}"></td>
+    <td th:text="${drink.getAmount2()}"></td>
+    <td th:text="${drink.getDescription()}"></td>
+  </tr>
+</table>
+</body>
+</html>

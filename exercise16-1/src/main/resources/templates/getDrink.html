@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Main</th>
+    <th>Amount1</th>
+    <th>Second</th>
+    <th>Amount2</th>
+    <th>Description</th>
+  </tr>
+  <tr th:each="drink : ${drinks}">
+    <td th:text="${drink.name}"></td>
+    <td th:text="${drink.main}"></td>
+    <td th:text="${drink.amount1}"></td>
+    <td th:text="${drink.second}"></td>
+    <td th:text="${drink.amount2}"></td>
+    <td th:text="${drink.description}"></td>
+  </tr>
+</table>
+</body>
+</html>

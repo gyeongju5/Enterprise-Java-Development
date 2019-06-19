@@ -9,7 +9,8 @@ public class ColorBean implements Serializable {
   private String object1;
   private String object2;
 
-  public ColorBean() {}
+  public ColorBean() {
+  }
 
   public String getName() {
     return name;

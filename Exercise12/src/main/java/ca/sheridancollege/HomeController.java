@@ -11,51 +11,18 @@ import java.util.Objects;
 @Controller
 public class HomeController {
 
-//  @GetMapping("/")
-//  public String login(HttpServletRequest request, HttpSession session) {
-//
-//    return "login";
-//  }
-
-//  @GetMapping("add")
-//  public String welcomePage(HttpServletRequest request, HttpSession session) {
-//
-//    String yourName;
-//    int count = 0;
-//
-//    if(session.isNew()) {
-//
-//      yourName = new String();
-//      yourName = request.getParameter("name");
-//
-//      count =  1;
-//
-//      session.setAttribute("name", yourName);
-//      session.setAttribute("count", count);
-//
-//    } else {
-//
-//      count++;
-//      session.setAttribute("count", count);
-//
-//    }
-//
-//    return "welcome";
-//  }
-
   @GetMapping("/")
   public String login(@RequestParam(name = "name", required = false) String name, HttpSession session) {
 
     if (session.isNew()) {
       return "login";
 
-    }
-    else {
-      if (Objects.nonNull(name) && !name.isEmpty()){
+    } else {
+      if (Objects.nonNull(name) && !name.isEmpty()) {
         session.setAttribute("yourName", name);
 
       }
-      if (null==session.getAttribute("yourCount")) {
+      if (null == session.getAttribute("yourCount")) {
         session.setAttribute("yourCount", 1);
       } else {
         int count = (int) session.getAttribute("yourCount");

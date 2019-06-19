@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/mystyle.css" th:href="@{css/mystyle.css}">
+  <title>Exercise10</title>
+</head>
+
+<body>
+<h1 style="text-align:center;">Welcome, <span th:text="${session.player.name}"></span>&nbsp;&nbsp;winnings:
+  $<span th:text="${session.player.score}"></span></h1>
+<div class="wrapper">
+
+  <!-- Category1 -->
+  <form action="/question" method="GET">
+
+    <div class="category category-1">
+      <h3>Nations</h3>
+      <!--      <a href="/question?value=100&category=nations" >$100</a>-->
+      <button type="submit" name="qnum" value="0">$100</button>
+      <button type="submit" name="qnum" value="1">$200</button>
+      <button type="submit" name="qnum" value="2">$300</button>
+      <button type="submit" name="qnum" value="3">$400</button>
+      <button type="submit" name="qnum" value="4">$500</button>
+    </div>
+  </form>
+
+  <!-- Category2 -->
+  <form action="/question" method="GET">
+    <div class="category category-2">
+      <h3>Electronics</h3>
+      <button type="submit" name="qnum" value="5">$100</button>
+      <button type="submit" name="qnum" value="6">$200</button>
+      <button type="submit" name="qnum" value="7">$300</button>
+      <button type="submit" name="qnum" value="8">$400</button>
+      <button type="submit" name="qnum" value="9">$500</button>
+    </div>
+  </form>
+
+  <!-- Category3 -->
+  <form action="/question" method="GET">
+    <div class="category category-3">
+      <h3>Musics</h3>
+      <button type="submit" name="qnum" value="10">$100</button>
+      <button type="submit" name="qnum" value="11">$200</button>
+      <button type="submit" name="qnum" value="12">$300</button>
+      <button type="submit" name="qnum" value="13">$400</button>
+      <button type="submit" name="qnum" value="14">$500</button>
+    </div>
+  </form>
+
+  <!-- Category4 -->
+  <form action="/question" method="GET">
+    <div class="category category-4">
+      <h3>Sports</h3>
+      <button type="submit" name="qnum" value="15">$100</button>
+      <button type="submit" name="qnum" value="16">$200</button>
+      <button type="submit" name="qnum" value="17">$300</button>
+      <button type="submit" name="qnum" value="18">$400</button>
+      <button type="submit" name="qnum" value="19">$500</button>
+    </div>
+  </form>
+
+  <!-- Category5 -->
+  <form action="/question" method="GET">
+    <div class="category category-5">
+      <h3>Programming</h3>
+      <button type="submit" name="qnum" value="20">$100</button>
+      <button type="submit" name="qnum" value="21">$200</button>
+      <button type="submit" name="qnum" value="22">$300</button>
+      <button type="submit" name="qnum" value="23">$400</button>
+      <button type="submit" name="qnum" value="24">$500</button>
+    </div>
+  </form>
+
+</div>
+</body>
+</html>

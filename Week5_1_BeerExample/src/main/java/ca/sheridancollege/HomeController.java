@@ -10,20 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
-    public String home() {
-        return "pickBeer.html";
-    }
+  @GetMapping("/")
+  public String home() {
+    return "pickBeer.html";
+  }
 
-    @GetMapping("SelectBeer.do")
-    public String selectBeer(HttpServletRequest request) {
+  @GetMapping("SelectBeer.do")
+  public String selectBeer(HttpServletRequest request) {
 
-        String c = request.getParameter("colour");
-        BeerExpert be = new BeerExpert();
-        Beer b = be.pickBeer(c);
-        request.setAttribute("mybeer", b);
-        System.out.println(be.pickBeer(c));
+    String c = request.getParameter("colour");
+    BeerExpert be = new BeerExpert();
+    Beer b = be.pickBeer(c);
+    request.setAttribute("mybeer", b);
+    System.out.println(be.pickBeer(c));
 
-        return "showBeer";
-    }
+    return "showBeer";
+  }
 }

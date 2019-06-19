@@ -8,17 +8,21 @@
   h1 {
     text-align: center;
   }
+
   content {
     width: 70%;
     margin: 2rem auto;
   }
+
   table {
-    width: 70%;text-transform: uppercase;
+    width: 70%;
+    text-transform: uppercase;
     border: solid 1px gray;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
+
   table tr td {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -26,22 +30,22 @@
   }
 </style>
 <body>
-  <h1>Show Colour Selection</h1>
-  <div class="content">
-    <table align="center">
-      <tr>
-        <th>Color</th>
-        <th>Food</th>
-        <th>Object1</th>
-        <th>Object2</th>
-      </tr>
-      <tr>
-        <td th:text="${colorBean.Name}"></td>
-        <td th:text="${colorBean.Food}"></td>
-        <td th:text="${colorBean.Object1}"></td>
-        <td th:text="${colorBean.Object2}"></td>
-      </tr>
-    </table>
-  </div>
+<h1>Show Colour Selection</h1>
+<div class="content">
+  <table align="center">
+    <tr>
+      <th>Color</th>
+      <th>Food</th>
+      <th>Object1</th>
+      <th>Object2</th>
+    </tr>
+    <tr>
+      <td th:text="${colorBean.Name}"></td>
+      <td th:text="${colorBean.Food}"></td>
+      <td th:text="${colorBean.Object1}"></td>
+      <td th:text="${colorBean.Object2}"></td>
+    </tr>
+  </table>
+</div>
 </body>
 </html>

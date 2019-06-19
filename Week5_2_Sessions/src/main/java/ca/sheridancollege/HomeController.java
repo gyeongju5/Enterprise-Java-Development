@@ -37,7 +37,7 @@ public class HomeController {
     if (session.isNew()) {
       names = new ArrayList<String>();
     } else {
-      names = (ArrayList<String>)session.getAttribute("nameList");
+      names = (ArrayList<String>) session.getAttribute("nameList");
     }
     names.add(n);
     session.setAttribute("nameList", names);
